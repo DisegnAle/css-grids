@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Prova</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<style type="text/css">
+		.container {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(320px, 1fr));
+			grid-template-rows: 200px 100px;
+			background: white;
+			grid-column-gap: 1rem;
+			grid-row-gap: 1rem;
+			grid-auto-rows: 100px;
+	
+		}
+		
+		.container .item {
+			border: 1px solid;
+			background: #03A9F4;
+		}
+		
+		/* stabilisco la dimensione di ciascun div con la prop grid-area 
+		definita da row-start, column-start, row-end, column-end*/
+		.container .item1{
+			grid-area: 1 / 2 / 2 / 3;
+			background: yellow
+		}
+		
+		.container .item3{
+			/* Shorthand */ 
+			grid-column: 2 / 4;
+			grid-row: 2 / 3;
+			background: yellow
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	
+	<h3>Line based positioning</h3>	
+	<div class="container">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+		<div class="item item4">4</div>
+		<div class="item item5">5</div>
+		<div class="item item6">6</div>
+	</div>
+	
+</body>
+
+</html>

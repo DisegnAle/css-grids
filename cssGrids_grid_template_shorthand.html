@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Prova</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<style type="text/css">
+		.grid {
+			display: grid;
+			/*grid-template-columns: repeat(4, 1fr);*/
+			/*grid-template-rows: auto 300px;*/
+			grid-template: auto 300px / repeat(4, 1fr);
+			/* se ho delle named areas la shorthand sarà 
+			grid-template: 'head head head head' auto 
+			'aside article footer' 300px / repeat(4, 1fr);	
+			ovvero definisco LA PRIMA RIGA E LA SUA DIMENSIONE
+							 LA SECONDA RIGA E LA SUA DIMENSIONE
+							 LA DIMENSIONE DELLE COLONNE
+			*/ 
+			grid-auto-rows: 200px;
+			grid-gap: 20px;	
+		}
+		
+		.grid div {
+			border: 1px solid;
+			background: #03A9F4;	
+		}
+		
+		.grid div:nth-child(1) {
+			grid-column: 1 / -1	
+		}
+		
+		.grid div:nth-child(2) {
+			grid-column: 1;
+			grid-row: 2
+		}
+		
+		.grid div:nth-child(3) {
+			grid-column: 2 / 4;
+			grid-row: 2;
+		}
+		
+		.grid div:nth-child(4) {
+			grid-column: 4;
+			grid-row: 2;
+		}
+		
+		
+
+	</style>
+</head>
+
+<body>
+	
+	<h3>The grid-template shorthand</h3>	
+	<div class="grid">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>		
+	</div>
+	
+</body>
+
+</html>

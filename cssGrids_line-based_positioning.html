@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Prova</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<style type="text/css">
+		.container {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(320px, 1fr));
+			grid-template-rows: 200px 100px;
+			background: white;
+			grid-column-gap: 1rem;
+			grid-row-gap: 1rem;
+			grid-auto-rows: 100px;
+	
+		}
+		
+		.container .item {
+			border: 1px solid;
+			background: #03A9F4;
+		}
+		
+		/* stabilisco l'ordine del primo item 
+		posizionadolo nella seconda colonna della prima riga */
+		.container .item1{
+			grid-column-start: 1;
+			grid-column-end: -1;
+		}
+		
+		.container .item3{
+			/* Shorthand */ 
+			grid-column: 2 / 4;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	
+	<h3>Line based positioning</h3>	
+	<div class="container">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+		<div class="item item4">4</div>
+		<div class="item item5">5</div>
+		<div class="item item6">6</div>
+	</div>
+	
+</body>
+
+</html>
